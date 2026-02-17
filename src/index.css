@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-light: #fafafa;
+  --color-primary-dark: #181b20;
+
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+/* //111317
+//FAFAFA */
