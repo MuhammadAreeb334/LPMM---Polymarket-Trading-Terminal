@@ -4,12 +4,14 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#111317] text-gray-900 dark:text-white transition-colors">
-      <TopBar />
-      <main className="p-4">
+    <React.Fragment>
+    <TopBar />
+    <div className="h-[95vh] overflow-auto bg-[#FAFAFA] dark:bg-[#111317] text-gray-900 dark:text-white transition-colors">
+      <main className="p-4 border border-amber-50 ">
         <Outlet />
       </main>
     </div>
+    </React.Fragment>
   );
 };
 

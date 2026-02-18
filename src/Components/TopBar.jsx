@@ -5,9 +5,9 @@ import { useTheme } from "../Context/ThemeContext";
 const TopBar = () => {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === "dark";
-
+//style={h-calc(100vh-5vh)}
   return (
-    <header className="px-4 py-3 bg-white dark:bg-primary-dark shadow-sm transition-colors border-b border-gray-200 dark:border-gray-700">
+    <header  className="px-4 py-3 bg-white dark:bg-primary-dark shadow-sm transition-colors border-b border-gray-200 dark:border-gray-700">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 cursor-pointer">
           LPMM

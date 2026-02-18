@@ -1,9 +1,39 @@
 @import "tailwindcss";
 
+@layer base {
+  /* This targets ALL scrollable elements, including your div */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent; /* Makes it look cleaner inside cards */
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+  }
+
+  /* Dark mode specific - No space before :: */
+  .dark *::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05); 
+  }
+
+  .dark *::-webkit-scrollbar-thumb {
+    background: #525252;
+  }
+
+  .dark *::-webkit-scrollbar-thumb:hover {
+    background: #737373;
+  }
+}
 @theme {
   --color-primary-light: #fafafa;
   --color-primary-dark: #181b20;
-
 }
 
 @variant dark (&:where(.dark, .dark *));

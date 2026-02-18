@@ -1,0 +1,60 @@
+const MARKET_DATA = [
+  {
+    id: 1,
+    question: "Will Jack Antonoff attend Taylor Swift's wedding?",
+    probability: 88.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+  {
+    id: 2,
+    question: "Will Jared Goff attend Taylor Swift's wedding?",
+    probability: 9.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+  {
+    id: 3,
+    question: "Will Lana Del Rey attend Taylor Swift's wedding?",
+    probability: 57.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+  {
+    id: 4,
+    question: "Will Lana Del Rey attend Taylor Swift's wedding?",
+    probability: 57.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+  {
+    id: 5,
+    question: "Will Lana Del Rey attend Taylor Swift's wedding?",
+    probability: 57.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+  {
+    id: 6,
+    question: "Will Lana Del Rey attend Taylor Swift's wedding?",
+    probability: 57.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+  {
+    id: 7,
+    question: "Will Lana Del Rey attend Taylor Swift's wedding?",
+    probability: 57.5,
+    date: "12/31/2026",
+    min: 5,
+    tags: ["Music", "NFL", "Taylor Swift"],
+  },
+];
+
+export default MARKET_DATA;
