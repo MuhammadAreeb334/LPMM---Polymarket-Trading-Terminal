@@ -72,7 +72,7 @@ const Dashboard = () => {
             Select a market to view order book
           </p>
         </div>
-        <div className="flex flex-col max-h-[500px] overflow-y-auto [&::-webkit-scrollbar-track]:bg-transparent">
+        <div className="flex flex-col max-h-[400px] overflow-y-auto [&::-webkit-scrollbar-track]:bg-transparent">
           {MarketData.map((market) => (
             <MarketCard key={market.id} market={market} />
           ))}

@@ -5,9 +5,9 @@ import { Outlet } from "react-router-dom";
 const MainLayout = () => {
   return (
     <React.Fragment>
-    <TopBar />
-    <div className="h-[95vh] overflow-auto bg-[#FAFAFA] dark:bg-[#111317] text-gray-900 dark:text-white transition-colors">
-      <main className="p-4 border border-amber-50 ">
+    <div className="flex flex-col h-screen bg-[#FAFAFA] dark:bg-[#111317] text-gray-900 dark:text-white transition-colors">
+      <TopBar />
+      <main className="flex-1 overflow-y-auto p-4">
         <Outlet />
       </main>
     </div>
@@ -16,3 +16,9 @@ const MainLayout = () => {
 };
 
 export default MainLayout;
+{/* <div className="flex flex-col h-screen bg-[#FAFAFA] dark:bg-[#111317] text-gray-900 dark:text-white transition-colors">
+      <TopBar />
+      <main className="flex-1 overflow-y-auto p-4">
+        <Outlet />
+      </main>
+    </div> */}

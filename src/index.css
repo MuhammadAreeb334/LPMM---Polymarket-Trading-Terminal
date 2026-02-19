@@ -20,7 +20,7 @@
 
   /* Dark mode specific - No space before :: */
   .dark *::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05); 
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .dark *::-webkit-scrollbar-thumb {
@@ -40,3 +40,6 @@
 
 /* //111317
 //FAFAFA */
+html, body {
+  overflow: hidden;
+}
