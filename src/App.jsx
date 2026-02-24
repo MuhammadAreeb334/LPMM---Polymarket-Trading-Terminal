@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import MarketDetails from "./Pages/MarketDetails";
 import MainLayout from "./Layout/MainLayout";
-import Dashboard from "./Pages/DashBoard";
-
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
   return (
