@@ -38,16 +38,16 @@ const CardInfo = () => {
           <div className="flex gap-2 md:gap-4 py-4">
             <div className="w-14 h-14">
               <img
-                src={market.icon}
+                src={market?.icon}
                 alt="logo"
                 className="w-full h-full object-cover"
               />
             </div>
             <div>
-              <h1 className="text-lg font-medium">{market.question}</h1>
+              <h1 className="text-lg font-medium">{market?.question}</h1>
               <p className="text-gray-500 text-sm mt-1 flex items-center gap-2">
                 <Calendar size={14} />
-                Ends: {new Date(market.endDate).toLocaleDateString()}
+                Ends: {new Date(market?.endDate).toLocaleDateString()}
               </p>
             </div>
           </div>
@@ -99,12 +99,12 @@ const CardInfo = () => {
           <div className="space-y-2">
             <h2 className="font-semibold">Description</h2>
             <p className="text-sm text-gray-500 leading-relaxed">
-              {market.description}
+              {market?.description}
             </p>
           </div>
 
           <div className="flex gap-2 mt-4 pb-2">
-            {market.tags.map((tag) => (
+            {market?.tags.map((tag) => (
               <span
                 key={tag}
                 className="bg-gray-50 dark:bg-[#1B1E23] px-2 py-1 rounded text-[10px] border border-gray-200 dark:border-gray-700 uppercase"

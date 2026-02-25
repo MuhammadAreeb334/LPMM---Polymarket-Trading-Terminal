@@ -5,7 +5,7 @@ const MarketCard = ({ markets }) => {
   const navigate = useNavigate();
 
   const handleNavigate = (market) => {
-    navigate(`/market/${market.condition_id}`, {
+    navigate(`/market/${market?.condition_id}`, {
       state: { marketData: market },
     });
   };
@@ -13,21 +13,21 @@ const MarketCard = ({ markets }) => {
   return (
     <>
       {markets.map((market) => {
-        const yesToken = market.tokens?.find(
+        const yesToken = market?.tokens?.find(
           (token) => token.outcome === "Yes",
         );
         const probability = yesToken?.price ?? 0;
-        const date = new Date(market.endDate).toLocaleDateString();
+        const date = new Date(market?.endDate).toLocaleDateString();
 
         return (
           <div
-            key={market.condition_id}
+            key={market?.condition_id}
             onClick={() => handleNavigate(market)}
             className="group flex flex-col md:flex-row md:items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 hover:bg-[#FAFAFA] dark:hover:bg-[#111317] transition-colors cursor-pointer last:border-0"
           >
             <div className="flex-1 space-y-3">
               <p className="text-sm leading-tight transition-colors">
-                {market.question}
+                {market?.question}
               </p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-500">
                 <span className="flex items-center gap-1 text-gray-400">
@@ -37,11 +37,11 @@ const MarketCard = ({ markets }) => {
                   <Clock size={14} /> {date}
                 </span>
                 <span className="flex items-center gap-1 text-gray-400">
-                  Min: ${market.minimum_order_size}
+                  Min: ${market?.minimum_order_size}
                 </span>
               </div>
               <div className="flex flex-wrap items-center gap-x-2 gap-y-2 text-xs text-gray-500">
-                {market.tags.map((tag) => (
+                {market?.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-2 py-0.5 rounded bg-[#FAFAFA] dark:bg-[#21262d] text-[10px] font-medium border border-gray-200 dark:border-gray-700"
@@ -59,7 +59,7 @@ const MarketCard = ({ markets }) => {
                     : "bg-red-500/10 border-red-500/20 text-red-500"
                 }`}
               >
-                {market.active ? "Active" : "Closed"}
+                {market?.active ? "Active" : "Closed"}
               </span>
               <ChevronRight
                 size={18}
