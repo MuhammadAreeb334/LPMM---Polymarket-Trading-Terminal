@@ -42,7 +42,7 @@ const OrderBook = () => {
       } finally {
         if (isMounted) setLoading(false);
         // Poll again after 3 seconds
-        timeoutId = setTimeout(fetchOrderBook, 5000);
+        timeoutId = setTimeout(fetchOrderBook, 10000);
       }
     };
 

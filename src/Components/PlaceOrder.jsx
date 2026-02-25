@@ -33,7 +33,7 @@ const PlaceOrder = () => {
       } catch (err) {
         console.error("Failed to fetch order book:", err);
       } finally {
-        timeoutId = setTimeout(fetchOrderBook, 5000);
+        timeoutId = setTimeout(fetchOrderBook, 10000);
       }
     };
 
