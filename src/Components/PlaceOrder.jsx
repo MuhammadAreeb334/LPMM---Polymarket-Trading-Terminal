@@ -3,7 +3,7 @@ import { FireAPI } from "../Hooks/useRequest";
 import { useParams } from "react-router-dom";
 // import { toast } from "react-hot-toast";
 
-const PlaceOrder = () => {
+const PlaceOrder = ({ selectedPrice, activeSide, setActiveSide }) => {
   const { id } = useParams();
   const [orderType, setOrderType] = useState("Limit");
   const [outcome, setOutcome] = useState("YES");
@@ -15,6 +15,23 @@ const PlaceOrder = () => {
   const [bestAsk, setBestAsk] = useState(0);
   const [loading, setLoading] = useState(false);
 
+  // Sync internal side when the parent state changes (from table click)
+  useEffect(() => {
+    setSide(activeSide);
+  }, [activeSide]);
+
+  // Sync internal price when table is clicked
+  useEffect(() => {
+    if (selectedPrice) {
+      setPrice(selectedPrice);
+    }
+  }, [selectedPrice]);
+
+  // When clicking Buy/Sell buttons manually
+  const handleSideChange = (newSide) => {
+    setSide(newSide);
+    setActiveSide(newSide);
+  };
   useEffect(() => {
     let isMounted = true;
     let timeoutId;
@@ -127,7 +144,7 @@ const PlaceOrder = () => {
             {["Buy", "Sell"].map((opt) => (
               <button
                 key={opt}
-                onClick={() => setSide(opt)}
+                onClick={() => handleSideChange(opt)}
                 className={`flex-1 text-sm py-2 rounded-md border border-gray-200 dark:border-gray-700 ${
                   side === opt
                     ? opt === "Buy"

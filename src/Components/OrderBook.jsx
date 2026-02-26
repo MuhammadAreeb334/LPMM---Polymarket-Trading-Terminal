@@ -3,7 +3,7 @@ import { Loader } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { FireAPI } from "../Hooks/useRequest.js";
 
-const OrderBook = () => {
+const OrderBook = ({ setSelectedPrice, setActiveSide }) => {
   const { id } = useParams();
   const [orders, setOrders] = useState({ bids: [], asks: [] });
   const [loading, setLoading] = useState(true);
@@ -132,7 +132,14 @@ const OrderBook = () => {
                 </thead>
                 <tbody>
                   {processedBids.map((row, i) => (
-                    <tr key={i} className="relative group">
+                    <tr
+                      key={i}
+                      className="relative group cursor-pointer hover:bg-green-500/5" 
+                      onClick={() => {
+                        setSelectedPrice(row?.price);
+                        setActiveSide("Buy"); 
+                      }}
+                    >
                       <td className="text-green-500 font-medium py-1">
                         {row?.price}
                       </td>
@@ -159,7 +166,14 @@ const OrderBook = () => {
                 </thead>
                 <tbody>
                   {processedAsks.map((row, i) => (
-                    <tr key={i} className="relative">
+                    <tr
+                      key={i}
+                      className="relative group cursor-pointer hover:bg-red-500/5" 
+                      onClick={() => {
+                        setSelectedPrice(row?.price);
+                        setActiveSide("Sell"); 
+                      }}
+                    >
                       <td className="text-red-500 font-medium py-1">
                         {row?.price}
                       </td>
