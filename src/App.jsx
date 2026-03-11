@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import MarketDetails from "./pages/MarketDetails";
-import MainLayout from "./Layout/MainLayout";
-import Dashboard from "./pages/Dashboard";
+import MarketDetails from "./pages/MarketDetails.jsx";
+import MainLayout from "./Layout/MainLayout.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 function App() {
   return (
