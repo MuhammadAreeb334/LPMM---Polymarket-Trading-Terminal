@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MarketCard from "../Components/MarketCard";
+import MarketCard from "../Components/MarketCard.jsx";
 import { useSocket } from "../Context/SocketContext.jsx";
 import { Loader } from "lucide-react";
 
